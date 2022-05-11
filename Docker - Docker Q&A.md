@@ -18,6 +18,11 @@ docker exec -it container_name /bin/bash
 ```shell
 docker rm -f $(docker ps -aq)
 ```
-* 
+* Check the 8080 ports and all ports
+```
+sudo netstat -ntlp | grep :8080
+# tcp        0      0 127.0.0.1:8080          0.0.0.0:*               LISTEN      131801/puma 5.3.2 ( 
+sudo lsof -i -P -n | grep :8080
+```
 
  
