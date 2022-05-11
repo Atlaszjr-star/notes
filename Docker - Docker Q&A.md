@@ -14,6 +14,10 @@ docker run --name=container_name -dit -v volume_name:/container/dir image_name
 #enter the /bash in container
 docker exec -it container_name /bin/bash
 ```  
-
+* How to remove all containers
+```shell
+docker rm -f $(docker ps -aq)
+```
+* 
 
  
