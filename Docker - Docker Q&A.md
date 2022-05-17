@@ -29,5 +29,14 @@ sudo lsof -i -P -n | grep :8080
 sudo docker inspect container_id
 sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 9292ba15652a
 ```
+* Docker overrules UFW!
+[docker overruls UFW](https://chjdev.com/2016/06/08/docker-ufw/)
 
- 
+* Some ufw checking
+```
+ sudo ufw enable
+ sudo ufw disable
+ sudo ufw allow port/tcp
+ sudo ufw status verbose
+```
+
