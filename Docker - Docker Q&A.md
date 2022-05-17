@@ -24,5 +24,10 @@ sudo netstat -ntlp | grep :8080
 # tcp        0      0 127.0.0.1:8080          0.0.0.0:*               LISTEN      131801/puma 5.3.2 ( 
 sudo lsof -i -P -n | grep :8080
 ```
+* Check the ip address of running container
+```
+sudo docker inspect container_id
+sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 9292ba15652a
+```
 
  
