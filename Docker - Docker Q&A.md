@@ -67,5 +67,7 @@ kill -9 PID  // free port
  sudo ufw allow "Nginx xxx"
  # then Nginx can be seen in:
  sudo ufw status
- 
+
  ```
+* docker overrules the ufw, docker will manipulate the iptables.
+https://chjdev.com/2016/06/08/docker-ufw/
