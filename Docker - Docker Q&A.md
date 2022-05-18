@@ -49,3 +49,23 @@ lsof -n -i :'port-number' | grep LISTEN  // get port details
 # sample  response:  java   4744 (PID)  test  364u  IP0 asdasdasda   0t0  TCP *:port-number (LISTEN)
 kill -9 PID  // free port
 ```
+
+* How to allow the ports of services in nginx (config with ufw), because nginx always follows the ufw rules, if the port is not allowed in ufw, then not accessable from outside machine in the LAN
+ ```
+ # option 0: disable ufw
+ sudo ufw disable
+ # option 1: allow the specific port in ufw
+ sudo ufw allow port_num/tcp
+ sudo ufw status numbered
+ # option 2: add nginx to ufw
+ sudo cd /etc/ufw/application.d/nginx
+ #[Nginx xxx]
+ #title=Nginx Web Server (HTTP + HTTPS)
+ #description=Small, but very powerful and efficient web server
+ #ports=new_port_num, 80,443/tcp
+ sudo ufw app update Nginx xxx
+ sudo ufw allow "Nginx xxx"
+ # then Nginx can be seen in:
+ sudo ufw status
+ 
+ ```
