@@ -34,7 +34,7 @@ sudo systemctl status postgresql.service
  db_name-#: \q # exit
  ```
  
-  * enter postgresql server in docker container
+  * enter postgresql server in docker container, for example, database of wiki.js
  ```
  #enter the terminal of container in which postgres running as root user
  docker exec -it container_name /bin/bash
