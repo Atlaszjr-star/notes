@@ -71,3 +71,12 @@ kill -9 PID  // free port
  ```
 * docker overrules the ufw, docker will manipulate the iptables.
 https://chjdev.com/2016/06/08/docker-ufw/
+
+* check the logs of container
+```
+sudo docker logs container_name
+```
+* accese the postgresql server in container from host
+```
+https://betterprogramming.pub/connect-from-local-machine-to-postgresql-docker-container-f785f00461a7
+```
