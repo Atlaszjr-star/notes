@@ -20,11 +20,11 @@ sudo systemctl status postgresql.service
  ```
  * enter posegresql server in docker container
  ```
- # enter the terminal of container as root user
+ #enter the terminal of container as root user
  docker exec -it container_name /bin/bash
- # check the users list, if postgres exits
+ #check the users list, if postgres exits
  cut -d :f1 /etc/passwd
- # switch user to postgres
+ #switch user to postgres
  su - postgres
  postgres@container_name:
  psql -d db_name -U user_name # connect specific database with user_name
@@ -32,4 +32,20 @@ sudo systemctl status postgresql.service
  db_name-#: \d + check all table in db_name
  db_name-#: SELECT * from table_name;
  db_name-#: \q # exit
+ ```
+ 
+  * enter posegresql server in docker container
+ ```
+ #enter the terminal of container in which postgres running as root user
+ docker exec -it container_name /bin/bash
+ #check the users list, if postgres exits
+ cut -d :f1 /etc/passwd
+ #switch user to postgres
+ su - postgres
+ postgres@container_name:
+ psql -d wiki -U wiki # connect database wiki with user_name wiki
+ wiki-#: \l # check all databases at server
+ wiki-#: \d + check all table in db_name
+ wiki-#: SELECT * from table_name;
+ wiki-#: \q # exit
  ```
