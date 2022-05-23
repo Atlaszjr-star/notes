@@ -55,6 +55,7 @@ sudo systemctl status postgresql.service
 
 
 ### MariaDB
+```
 * access to mariaDB
 sudo mysql -u [username] -p[password] -h [hostname] database
 # example
@@ -62,5 +63,4 @@ sudo mysql xwiki
 MariaDB[xwiki]> show databases;
 MariaDB[xwiki]> show tables;
 MariaDB[xwiki]> SELECT * from [tablename];
-
- ```
+```
