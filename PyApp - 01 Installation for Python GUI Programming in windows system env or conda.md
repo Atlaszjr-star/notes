@@ -41,7 +41,7 @@ pyinstaller app.py
 find the your geopandas in conda env, normally it's in  
 ``` 
 C:\Users\Jiarui.Zhang\Anaconda3\envs\ox\Lib\site-packages\geopandas
-# uncomment following statement in your __inti__.py
+# comment out following statement in your __inti__.py
 import geopandas.datasets
 ``` 
 then it should work
