@@ -5,7 +5,7 @@ created: '2022-05-09T21:28:26.831Z'
 modified: '2022-05-10T09:55:06.719Z'
 ---
 
-# 01 Installation for Python GUI Programming in windows system env or conda 
+#### * Installation for Python GUI Programming in windows system env or conda 
 
 1. Create new venv in conda and activate
 ```shell
@@ -35,5 +35,14 @@ pyinstaller app.py
   ```
 4. Finally you can run the app.exe in the folder /dist
 
-
+#### * Compile the application in conda with osmnx and geopandas
+1. The reason that pyinstaller can't not compile geopandas and osmnx(depends on geopandas) is that the geopandas datasets included in the package aren't found by pyinstaller because they are .shp files, if it contains non-python files that are ignored by pyinstaller.
+2. Solutions:
+find the your geopandas in conda env, normally it's in  
+``` 
+C:\Users\Jiarui.Zhang\Anaconda3\envs\ox\Lib\site-packages\geopandas
+# uncomment following statement in your __inti__.py
+import geopandas.datasets
+``` 
+then it should work
 
