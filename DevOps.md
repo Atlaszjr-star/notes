@@ -23,6 +23,11 @@ PermitRootLogin yes # allow root user login with ssh
   
 # restart ssh service
 /etc/init.d/ssh restart
+# keep ssh service always running
+systemctl enable ssh
+#(check ssh status and restart)
+sudo service ssh status    
+sudo service ssh start
 # assign password for root
 passwd
 # exit the container
