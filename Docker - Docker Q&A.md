@@ -77,4 +77,7 @@ https://chjdev.com/2016/06/08/docker-ufw/
 sudo docker logs container_name
 ```
 * accese the postgresql server in container from host: https://betterprogramming.pub/connect-from-local-machine-to-postgresql-docker-container-f785f00461a7
-
+* update the restart policy von container => always running unless stopped
+```
+docker update --restart unless-stopped container_name
+```
